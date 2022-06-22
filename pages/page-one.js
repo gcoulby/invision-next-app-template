@@ -13,7 +13,7 @@ export default function PageOne() {
 
                     const getData = () => {
                         fetch(
-                            `/api/protected?params=${context?.data?.user?.primaryGroup?.name},${context?.data?.access_token}`
+                            `/api/protected?clientRole=${context?.data?.user?.primaryGroup?.name}&accessToken=${context?.data?.access_token}`
                         )
                             .then((res) => res.json())
                             .then((data) => {
